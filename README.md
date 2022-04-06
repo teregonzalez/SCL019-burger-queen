@@ -706,7 +706,7 @@ cd <cohort-id>-burger-queen
 
 # Para confirmar que todo fue bien arranca la aplicación con el siguinte comando
 # y verifica que la interfaz se abre en el navegador.
-yarn start
+npm start
 ```
 
 ### Otros recursos
