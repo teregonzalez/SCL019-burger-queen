@@ -505,10 +505,6 @@ rápidamente a los clientes que las hicieron.
 
 ### Primeros pasos
 
-NOTA: Si estás haciendo el proyecto en equipo, estos pasos solo los necesita
-hacer una persona por equipo. El resto de las integrantes del equipo después
-podrán hacer sus propios _forks_ a partir del _fork_ principal de su equipo.
-
 1. Haz un _fork_ de este repo (en GitHub).
 
 2. Clona tu _fork_ en tu computadora:
