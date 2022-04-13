@@ -690,11 +690,11 @@ npx create-react-app burger-queen-tmp
 
 # Copiamos el _boilerplate_ del proyecto _encima_ de la aplicación creada con
 # `create-react-app`
-cp -r <cohort-id>-burger-queen/* burger-queen-tmp/
+cp -r SCL019-burger-queen/* burger-queen-tmp/
 
 # Copiamos el contenido de la aplicación creada con `create-react-app` de vuelta
 # al repo del proyecto (teniendo en cuenta el archivo _oculto_ `.gitignore`).
-cp -r burger-queen-tmp/.gitignore burger-queen-tmp/* <cohort-id>-burger-queen/
+cp -r burger-queen-tmp/.gitignore burger-queen-tmp/* SCL019-burger-queen/
 
 # Ya podemos borrar la instalación _temporal_ y quedarnos solo con el repo del
 # proyecto, con el que partimos.
@@ -702,7 +702,7 @@ rm -rf burger-queen-tmp
 
 # Volvemos a entrar en el directorio del proyecto y ya deberíamos estar listas
 # para comenzar.
-cd <cohort-id>-burger-queen
+cd SCL019-burger-queen
 
 # Para confirmar que todo fue bien arranca la aplicación con el siguinte comando
 # y verifica que la interfaz se abre en el navegador.
