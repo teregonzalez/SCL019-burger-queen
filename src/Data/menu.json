@@ -1,0 +1,16 @@
+{
+    "hamburguers": {
+        "simple": 10,
+        "double": 15
+    },
+    "side": {
+        "frenchfries": 5,
+        "onion rings": 15
+    },
+    "drinks": {
+        "water500": 5,
+        "water750": 7,
+        "soda500": 7,
+        "soda750": 10
+    }
+}
