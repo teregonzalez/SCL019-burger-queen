@@ -8,7 +8,9 @@ export const BreakfastMenu = () => {
 
     const getBreakfastMenu = () => {
         getMenu().then(res => {
-            const menuFoods = Object.keys(res.breakfast);
+            const menuFoods = Object.entries(res.breakfast).map((value) => {
+                return value[1].name
+              });;
             setFoods(menuFoods)
         }).catch(error => console.log(error));
     }
@@ -16,14 +18,15 @@ export const BreakfastMenu = () => {
     useEffect(() => {
         getBreakfastMenu()
     }, [])
+    
     return (
         <div>
-            <button onClick={getBreakfastMenu}
+            <button onClick={ getBreakfastMenu }
                 className="btn btn-light">
                 DESAYUNO
             </button>
-            {foods && foods.map((food, i) => (
-                    <button key={i}>{ food }</button>
+            { foods && foods.map((food, i) => (
+                    <button key={i}>{ food }{}</button>
                 ))}
         </div>
     )
