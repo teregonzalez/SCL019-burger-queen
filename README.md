@@ -115,7 +115,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ### CSS
 
-- [ ] **Uso de selectores de CSS**
+- [X] **Uso de selectores de CSS**
 
   <details><summary>Links</summary><p>
 
@@ -123,7 +123,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [CSS Selectors - MDN](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors)
 </p></details>
 
-- [ ] **Modelo de caja (box model): borde, margen, padding**
+- [X] **Modelo de caja (box model): borde, margen, padding**
 
   <details><summary>Links</summary><p>
 
@@ -134,7 +134,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [display - CSS Tricks](https://css-tricks.com/almanac/properties/d/display/)
 </p></details>
 
-- [ ] **Uso de flexbox en CSS**
+- [X] **Uso de flexbox en CSS**
 
   <details><summary>Links</summary><p>
 
@@ -143,7 +143,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Flexbox - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
 </p></details>
 
-- [ ] **Uso de CSS Grid Layout**
+- [X] **Uso de CSS Grid Layout**
 
   <details><summary>Links</summary><p>
 
@@ -151,7 +151,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Grids - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids)
 </p></details>
 
-- [ ] **Uso de media queries**
+- [X] **Uso de media queries**
 
   <details><summary>Links</summary><p>
 
@@ -160,7 +160,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ### JavaScript
 
-- [ ] **Arrays (arreglos)**
+- [X] **Arrays (arreglos)**
 
   <details><summary>Links</summary><p>
 
@@ -180,9 +180,9 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Objetos en JavaScript](https://curriculum.laboratoria.la/es/topics/javascript/05-objects/01-objects)
 </p></details>
 
-- [ ] **Diferenciar entre tipos de datos primitivos y no primitivos**
+- [X] **Diferenciar entre tipos de datos primitivos y no primitivos**
 
-- [ ] **Uso de condicionales (if-else, switch, operador ternario, lógica booleana)**
+- [X] **Uso de condicionales (if-else, switch, operador ternario, lógica booleana)**
 
   <details><summary>Links</summary><p>
 
@@ -200,7 +200,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Funciones — bloques de código reutilizables - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Functions)
 </p></details>
 
-- [ ] **Pruebas unitarias (unit tests)**
+- [X] **Pruebas unitarias (unit tests)**
 
   <details><summary>Links</summary><p>
 
@@ -221,7 +221,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Manual Mocks con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/manual-mocks)
 </p></details>
 
-- [ ] **Módulos de ECMAScript (ES Modules)**
+- [X] **Módulos de ECMAScript (ES Modules)**
 
   <details><summary>Links</summary><p>
 
@@ -229,9 +229,9 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [export - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/export)
 </p></details>
 
-- [ ] **Uso de linter (ESLINT)**
+- [X] **Uso de linter (ESLINT)**
 
-- [ ] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
+- [X] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
 
 - [ ] **Diferenciar entre expresiones (expressions) y sentencias (statements)**
 
@@ -252,15 +252,15 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ### Control de Versiones (Git y GitHub)
 
-- [ ] **Git: Instalación y configuración**
+- [X] **Git: Instalación y configuración**
 
-- [ ] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
+- [X] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
 
 - [ ] **Git: Integración de cambios entre ramas (branch, checkout, fetch, merge, reset, rebase, tag)**
 
 - [ ] **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
 
-- [ ] **GitHub: Despliegue con GitHub Pages**
+- [X] **GitHub: Despliegue con GitHub Pages**
 
   <details><summary>Links</summary><p>
 
@@ -273,13 +273,13 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ### user-centricity
 
-- [ ] **Diseñar un producto o servicio poniendo a la usuaria en el centro**
+- [X] **Diseñar un producto o servicio poniendo a la usuaria en el centro**
 
 ### product-design
 
-- [ ] **Crear prototipos de alta fidelidad que incluyan interacciones**
+- [X] **Crear prototipos de alta fidelidad que incluyan interacciones**
 
-- [ ] **Seguir los principios básicos de diseño visual**
+- [X] **Seguir los principios básicos de diseño visual**
 
 ### research
 
@@ -362,7 +362,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Adding a CSS Modules Stylesheet - Documentación de Create React App (en inglés)](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/)
 </p></details>
 
-- [ ] **React Router**
+- [X] **React Router**
 
   <details><summary>Links</summary><p>
 
