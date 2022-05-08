@@ -25,11 +25,12 @@
 }
 
 .btn:hover {     
-    background-color:#41051A;    
+    background-color:#41051A;
+    color: #FFF7EC;    
 }
 
 .btnReturn {
-    margin: 1rem;
+    margin: 0.5rem;
     color: #FFF7EC;
     background-color: #D67D3E;
     border-radius: 15px;
@@ -44,5 +45,6 @@
 }
 
 .btnReturn:hover {     
-    background-color:#41051A;    
+    background-color:#41051A;
+    color: #FFF7EC;    
 }
