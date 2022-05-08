@@ -1,12 +1,11 @@
 import './App.css';
-import { BreakfastMenu } from './Component/BreakfastMenu/BreakfastMenu';
-import { Header } from './Component/Header/Header';
+
+import { AppRouter } from './Component/AppRouter/AppRouter'
 
 const App = () =>{
   return (
     <>
-    <Header />
-    <BreakfastMenu />
+    <AppRouter />
     </>
   );
 }
