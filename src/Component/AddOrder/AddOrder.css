@@ -1,93 +1,133 @@
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Koulen&family=Yaldevi&display=swap');
+
 h1 {
-    font-family: Koulen;
-    font-size: 2rem;
-    color: #FFF7EC; 
-    margin: 0.5rem
+  font-family: Koulen;
+  font-size: 2rem;
+  color: #FFF7EC;
+  margin: 0.5rem
 }
 
 .addContainer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .titleAdd {
-    font-family: Koulen;
-    font-size: 2.25rem;
-    color: #41051A; 
-    margin: 0rem 0rem 0rem 0rem;
+  font-family: Koulen;
+  font-size: 2.25rem;
+  color: #41051A;
+  margin: 0rem 0rem 0rem 0rem;
 }
 
 .cartContainer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: #41051A;
-    border-radius: 15px;
-    margin: 1.406rem;
-    width: 46.438rem;
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  background-color: #41051A;
+  border-radius: 0.938rem 0.938rem 0px 0px;
+  margin: 1.406rem 1.406rem 0rem 1.406rem;
+  width: 46.438rem;
+  padding: 0rem 0rem 2rem 0rem;
 }
 
-.btnMenuContainer{
-    display: flex;
-    flex-direction:row
+.btnMenuContainer {
+  display: flex;
+  flex-direction: row
 }
 
 .addName {
-    color: #FFF7EC;
-    font-family: Concert One;
-    margin: 2rem 0rem 0rem 0rem;
-    font-size: 2.25rem;
+  color: #FFF7EC;
+  font-family: Concert One;
+  margin: 2rem 0rem 0rem 0rem;
+  font-size: 2.25rem;
 }
 
 .clientName {
-    margin: 1rem;
-    height: 6.625rem;
-    width: 42.563rem;
-    font-family: Koulen;
-    font-size: 2.25rem;
+  margin: 1rem;
+  height: 6.625rem;
+  width: 42.563rem;
+  font-family: Koulen;
+  font-size: 2.25rem;
 }
 
 .clientName::placeholder {
-    text-align: center;
+  text-align: center;
 }
 
 .selectTitle {
-    color: #FFF7EC;
-    font-family: Concert One;
-    margin: 0rem;
-    font-size: 2.25rem;
+  color: #FFF7EC;
+  font-family: Concert One;
+  margin: 0rem;
+  font-size: 2.25rem;
 }
 
 .btnMenu {
-    color: #FFF7EC;
-    background-color: transparent;
-    border: none;
-    font-family: Koulen;
-    font-size: 2.25rem;
-    width: 42.563rem;
-    height: 3.25rem;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    margin: 1rem;
+  color: #FFF7EC;
+  background-color: transparent;
+  border: none;
+  font-family: Koulen;
+  font-size: 1.563rem;
+  width: 42.563rem;
+  height: 3.25rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  margin: 1rem;
+}
+
+.btnContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.btnFood {
+  color: #7C1B3E;
+  background-color: #FFF7EC;
+  border: none;
+  font-family: Koulen;
+  font-size: 1.375rem;
+  width: 18.188rem;
+  height: 2.5rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  margin: 0.25rem;
 }
 
 .btnMenuTraditional {
-    color: #41051A;
-    background-color: #FFF7EC;
-    border: none;
-    font-family: Koulen;
-    font-size: 2.25rem;
-    width: 42.563rem;
-    height: 3.25rem;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    margin: 1rem 1rem 3rem 1rem;
+  color: #41051A;
+  background-color: #FFF7EC;
+  border: none;
+  font-family: Koulen;
+  font-size: 2.25rem;
+  width: 42.563rem;
+  height: 3.25rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  margin: 1rem 1rem 3rem 1rem;
 }
 
-.btnMenuTraditional:hover,  .btnMenuBreakfast:hover{     
-    background-color:#D67D3E;  
+.btnMenuTraditional:hover,
+.btnMenuBreakfast:hover {
+  background-color: #D67D3E;
+}
+
+.detailContainer {
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  background-color: #D497AD;
+  width: 46.438rem;
+  padding: 1rem;
+}
+
+th {
+  font-family: 'Koulen';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.563rem;
+  color: #41051A;
 }

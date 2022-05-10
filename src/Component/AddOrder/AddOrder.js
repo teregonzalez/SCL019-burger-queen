@@ -10,23 +10,32 @@ export const AddOrder = () => {
 
     const [foods, setFoods] = useState();
     const [str, setStr] = useState('breakfast');
+    const [orders, setOrders] = useState([]);
 
-    const toggleMenu = (i) => {
+    const pickMenu = (i) => {
         setStr(i);
+    }
+
+    const addToOrder = (food) => {
+        setOrders((currentOrder) => [
+            ...currentOrder,
+            food
+        ])
     }
 
     useEffect(() => {
         getMenu().then(res => {
-            if(str === 'breakfast'){
+            if (str === 'breakfast') {
                 const menuFoods = Object.entries(res.breakfast).map((value) => {
                     return value
-                  });
-                  setFoods(menuFoods)
-            } if(str === 'traditional'){
+                });
+                setFoods(menuFoods)
+            }
+            if (str === 'traditional') {
                 const menuFoods = Object.entries(res.traditional).map((value) => {
                     return value
-                  });
-                  setFoods(menuFoods)
+                });
+                setFoods(menuFoods)
             }
         }).catch(error => console.log(error));
     }, [str])
@@ -35,7 +44,7 @@ export const AddOrder = () => {
     //     clientName: '',
     //     orderNumber: ''
     // });
-    
+
     // const handleInputChange = (event) => {
     //     console.log(event.target.value);
     //     setDataClient({
@@ -54,30 +63,68 @@ export const AddOrder = () => {
             <div className='addContainer'>
                 <p className='titleAdd'>AGREGAR PEDIDO</p>
                 <div className='cartContainer'>
-                <div className='btnMenuContainer'>
-            <button onClick={ () => toggleMenu( 'breakfast' ) }
-                className="btnMenu">
-                DESAYUNO
-            </button>
+                    <div className='btnMenuContainer'>
+                        <button onClick={
+                                () => pickMenu('breakfast')
+                            }
+                            className="btnMenu">
+                            DESAYUNO
+                        </button>
 
-            <button onClick={ () => toggleMenu( 'traditional' ) }
-                className="btnMenu">
-                TRADITIONAL
-            </button>
-                </div>
-            { foods && foods.map((food, i) => (
-                <>
-                    <button key={i}>{ food[1].name }</button>
-                </>
-                ))}
-                {/* <input type='text' 
+                        <button onClick={
+                                () => pickMenu('traditional')
+                            }
+                            className="btnMenu">
+                            TRADITIONAL
+                        </button>
+                    </div>
+                    <div className='btnContainer'>
+                        {
+                        foods && foods.map((food, i) => (
+                            <div key={i}>
+                                <button className='btnFood'
+                                    key={
+                                        foods[i]
+                                    }
+                                    onClick={
+                                        () => addToOrder(food)
+                                }>
+                                    {
+                                    food[1].name
+                                }</button>
+                            </div>
+                        ))
+                    } </div>
+                    {/* <input type='text' 
                 className='clientName' 
                 name='clientName' 
                 placeholder='NOMBRE CLIENTE'
                 onChange={ handleInputChange }></input> */}
-                {/* <p className='selectTitle'>SELECCIONA MENU</p>
+                    {/* <p className='selectTitle'>SELECCIONA MENU</p>
                 <button className='btnMenuBreakfast'>DESAYUNO</button>
-                <button className='btnMenuTraditional'>TRADITIONAL</button> */}
+                <button className='btnMenuTraditional'>TRADITIONAL</button> */} </div>
+                <div className='detailContainer'>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>PRODUCTO</th>
+                                <th>CANTIDAD</th>
+                                <th>PRECIO</th>
+                            </tr>
+                        </thead>
+                        <tbody> 
+                        {orders && orders.map((order, i) => (
+                                <tr>
+                                <td className='tdFood'
+                                    key={orders[i]}>
+                                    {
+                                    order[1].name
+                                }</td>
+                                </tr>
+                            ))
+                        }
+                        </tbody>
+                    </table>
                 </div>
                 <Link className="btnReturn" to='/edit'>EDITAR PEDIDO</Link>
                 <Link className="btnReturn" to='/status'>ESTADO PEDIDOS</Link>
