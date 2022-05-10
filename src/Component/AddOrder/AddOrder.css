@@ -19,7 +19,7 @@ h1 {
     margin: 0rem 0rem 0rem 0rem;
 }
 
-.formContainer {
+.cartContainer {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -27,6 +27,11 @@ h1 {
     border-radius: 15px;
     margin: 1.406rem;
     width: 46.438rem;
+}
+
+.btnMenuContainer{
+    display: flex;
+    flex-direction:row
 }
 
 .addName {
@@ -55,9 +60,9 @@ h1 {
     font-size: 2.25rem;
 }
 
-.btnMenuBreakfast {
-    color: #41051A;
-    background-color: #FFF7EC;
+.btnMenu {
+    color: #FFF7EC;
+    background-color: transparent;
     border: none;
     font-family: Koulen;
     font-size: 2.25rem;
