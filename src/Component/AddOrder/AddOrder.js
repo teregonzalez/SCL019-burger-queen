@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 
 import {getMenu} from '../../firebase/data-firebase'
-import { GetName } from '../GetName/GetName'
+import {GetName} from '../GetName/GetName'
 import {Header} from '../Header/Header'
 import './AddOrder.css'
 
@@ -21,6 +21,10 @@ export const AddOrder = () => {
             ...currentOrder,
             food
         ])
+    }
+
+    const deleteProduct = (product) => {
+        setOrders(orders.filter(order => order !== product))
     }
 
     useEffect(() => {
@@ -85,20 +89,40 @@ export const AddOrder = () => {
                         <thead>
                             <tr>
                                 <th>PRODUCTO</th>
+                                <th></th>
                                 <th>CANTIDAD</th>
                                 <th>PRECIO</th>
                             </tr>
                         </thead>
-                        <tbody>{
-                            orders && orders.map((order, i) => (
+                        {
+                        orders && orders.map((order, i) => (
+                            <tbody>
                                 <tr>
                                     <td className='tdFood'
-                                        key={orders[i]}>{order[1].name}</td>
+                                        key={
+                                            orders[i]
+                                    }>
+                                        {
+                                        order[1].name
+                                    }</td>
+                                    <td>
+                                        <button className='btnDelete'
+                                            onClick={
+                                                () => deleteProduct(orders[i])
+                                        }>X</button>
+                                    </td>
+                                    <td className='tdContador'>contador</td>
+                                    <td className='tdPrice'
+                                        key={
+                                            orders[i].price
+                                    }>$ {
+                                        order[1].price
+                                    }</td>
                                 </tr>
-                            ))
-                        }</tbody>
-                    </table>
-                    <GetName />
+                            </tbody>
+                        ))
+                    } </table>
+                    <GetName/>
                 </div>
                 <Link className="btnReturn" to='/edit'>EDITAR PEDIDO</Link>
                 <Link className="btnReturn" to='/status'>ESTADO PEDIDOS</Link>
