@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Koulen&family=Yaldevi&display=swap');
+
+.nameContainer, .orderNumberContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.client, .orderNumber {
+    color: #41051A;
+    font-family: Concert One;
+    font-size: 1.5rem;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+
+.clientName {
+    color: #41051A;
+    font-family: Koulen;
+    border-color: transparent;
+    font-size: 1.5rem;
+}
+
+.clientName::placeholder {
+    color: #B0929D;
+}

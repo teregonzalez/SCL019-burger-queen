@@ -43,18 +43,6 @@ h1 {
   font-size: 2.25rem;
 }
 
-.clientName {
-  margin: 1rem;
-  height: 6.625rem;
-  width: 42.563rem;
-  font-family: Koulen;
-  font-size: 2.25rem;
-}
-
-.clientName::placeholder {
-  text-align: center;
-}
-
 .selectTitle {
   color: #FFF7EC;
   font-family: Concert One;

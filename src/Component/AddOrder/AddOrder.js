@@ -2,8 +2,8 @@ import React, {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 
 import {getMenu} from '../../firebase/data-firebase'
+import { GetName } from '../GetName/GetName'
 import {Header} from '../Header/Header'
-
 import './AddOrder.css'
 
 export const AddOrder = () => {
@@ -40,23 +40,7 @@ export const AddOrder = () => {
         }).catch(error => console.log(error));
     }, [str])
 
-    // const [dataClient, setDataClient] = useState({
-    //     clientName: '',
-    //     orderNumber: ''
-    // });
 
-    // const handleInputChange = (event) => {
-    //     console.log(event.target.value);
-    //     setDataClient({
-    //         ...dataClient,
-    //         [event.target.name] : event.target.value
-    //     })
-    // }
-
-    // const sendData = (event) => {
-    //     event.preventDefault();
-    //     console.log(dataClient.clientName);
-    // }
     return (
         <>
             <Header/>
@@ -95,14 +79,7 @@ export const AddOrder = () => {
                             </div>
                         ))
                     } </div>
-                    {/* <input type='text' 
-                className='clientName' 
-                name='clientName' 
-                placeholder='NOMBRE CLIENTE'
-                onChange={ handleInputChange }></input> */}
-                    {/* <p className='selectTitle'>SELECCIONA MENU</p>
-                <button className='btnMenuBreakfast'>DESAYUNO</button>
-                <button className='btnMenuTraditional'>TRADITIONAL</button> */} </div>
+                </div>
                 <div className='detailContainer'>
                     <table>
                         <thead>
@@ -112,19 +89,16 @@ export const AddOrder = () => {
                                 <th>PRECIO</th>
                             </tr>
                         </thead>
-                        <tbody> 
-                        {orders && orders.map((order, i) => (
+                        <tbody>{
+                            orders && orders.map((order, i) => (
                                 <tr>
-                                <td className='tdFood'
-                                    key={orders[i]}>
-                                    {
-                                    order[1].name
-                                }</td>
+                                    <td className='tdFood'
+                                        key={orders[i]}>{order[1].name}</td>
                                 </tr>
                             ))
-                        }
-                        </tbody>
+                        }</tbody>
                     </table>
+                    <GetName />
                 </div>
                 <Link className="btnReturn" to='/edit'>EDITAR PEDIDO</Link>
                 <Link className="btnReturn" to='/status'>ESTADO PEDIDOS</Link>
