@@ -154,3 +154,23 @@ th {
   font-size: 1.375rem;
   text-align: center;
 }
+
+.btnReturn {
+  margin: 0.5rem;
+  color: #FFF7EC;
+  background-color: #D67D3E;
+  border-radius: 15px;
+  border: none;
+  font-family: Koulen;
+  font-size: 2.25rem;
+  width: 46.438rem;
+  height: 3.25rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btnReturn:hover {     
+  background-color:#41051A;
+  color: #FFF7EC;    
+}

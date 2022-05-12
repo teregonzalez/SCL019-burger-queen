@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import {getMenu} from '../../firebase/data-firebase'
 import {GetName} from '../GetName/GetName'
 import {Header} from '../Header/Header'
-import './AddOrder.css'
+import styles from './AddOrder.module.css'
 
 export const AddOrder = () => {
 
@@ -17,14 +17,14 @@ export const AddOrder = () => {
     }
 
     const addToOrder = (food) => {
-        setOrders((currentOrder) => [
+        setOrders(currentOrder => [
             ...currentOrder,
             food
         ])
     }
 
     const deleteProduct = (product) => {
-        setOrders(orders.filter(order => order !== product))
+        setOrders(orders.filter((order, index) => index !== product))
     }
 
     useEffect(() => {
@@ -48,29 +48,29 @@ export const AddOrder = () => {
     return (
         <>
             <Header/>
-            <div className='addContainer'>
-                <p className='titleAdd'>AGREGAR PEDIDO</p>
-                <div className='cartContainer'>
-                    <div className='btnMenuContainer'>
+            <div className={styles.addContainer}>
+                <p className={styles.titleAdd}>AGREGAR PEDIDO</p>
+                <div className={styles.cartContainer}>
+                    <div className={styles.btnMenuContainer}>
                         <button onClick={
                                 () => pickMenu('breakfast')
                             }
-                            className="btnMenu">
+                            className={styles.btnMenu}>
                             DESAYUNO
                         </button>
 
                         <button onClick={
                                 () => pickMenu('traditional')
                             }
-                            className="btnMenu">
+                            className={styles.btnMenu}>
                             TRADITIONAL
                         </button>
                     </div>
-                    <div className='btnContainer'>
+                    <div className={styles.btnContainer}>
                         {
                         foods && foods.map((food, i) => (
                             <div key={i}>
-                                <button className='btnFood'
+                                <button className={styles.btnFood}
                                     key={
                                         foods[i]
                                     }
@@ -84,7 +84,7 @@ export const AddOrder = () => {
                         ))
                     } </div>
                 </div>
-                <div className='detailContainer'>
+                <div className={styles.detailContainer}>
                     <table>
                         <thead>
                             <tr>
@@ -94,39 +94,24 @@ export const AddOrder = () => {
                                 <th>PRECIO</th>
                             </tr>
                         </thead>
-                        {
-                        orders && orders.map((order, i) => (
-                            <tbody>
+                        {orders && orders.map((order, i) => (
+                            <tbody key={i}>
                                 <tr>
-                                    <td className='tdFood'
-                                        key={
-                                            orders[i]
-                                    }>
-                                        {
-                                        order[1].name
-                                    }</td>
-                                    <td>
-                                        <button className='btnDelete'
-                                            onClick={
-                                                () => deleteProduct(orders[i])
-                                        }>X</button>
-                                    </td>
-                                    <td className='tdContador'>contador</td>
-                                    <td className='tdPrice'
-                                        key={
-                                            orders[i].price
-                                    }>$ {
-                                        order[1].price
-                                    }</td>
+                                    <td className={styles.tdFood}>{order[1].name}</td>
+                                    <td><button className={styles.btnDelete}
+                                            onClick={() => deleteProduct(i)
+                                        }>X</button></td>
+                                    <td className={styles.tdContador}>contador</td>
+                                    <td className={styles.tdPrice}>$ {order[1].price}</td>
                                 </tr>
                             </tbody>
                         ))
-                    } </table>
+                    }</table>
                     <GetName/>
                 </div>
-                <Link className="btnReturn" to='/edit'>EDITAR PEDIDO</Link>
-                <Link className="btnReturn" to='/status'>ESTADO PEDIDOS</Link>
-                <Link className="btnReturn" to='/'>VOLVER A HOME</Link>
+                <Link className={styles.btnReturn} to='/edit'>EDITAR PEDIDO</Link>
+                <Link className={styles.btnReturn} to='/status'>ESTADO PEDIDOS</Link>
+                <Link className={styles.btnReturn} to='/'>VOLVER A HOME</Link>
             </div>
         </>
     )

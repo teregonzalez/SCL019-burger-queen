@@ -1,6 +1,6 @@
 import React, { useState} from 'react'
 
-import './GetName.css'
+import styles from './GetName.module.css'
 
 export const GetName = () => {
 
@@ -16,13 +16,13 @@ export const GetName = () => {
 
     return (
         <>
-        <div className='nameContainer'>
-        <p className='client'>Cliente</p>
-            <input type='text' className='clientName' name='clientName' placeholder='NOMBRE CLIENTE'
+        <div className={styles.nameContainer}>
+        <p className={styles.client}>Cliente</p>
+            <input type='text' className={styles.clientName} name='clientName' placeholder='NOMBRE CLIENTE'
                 onChange={ handleInputChange }></input>
         </div>
-        <div className='orderNumberContainer'>
-        <p className='orderNumber'>Pedido</p>
+        <div className={styles.orderNumberContainer}>
+        <p className={styles.orderNumber}>Pedido</p>
         </div>
         </>
     )

@@ -3,17 +3,17 @@ import { Link } from 'react-router-dom'
 
 import logo from '../../img/logo.svg'
 
-import './Home.css'
+import styles from './Home.module.css'
 
 export const Home = () => {
     return (
-        <div className="homeContainer">
-            <img className="logoHome"
+        <div className={styles.homeContainer}>
+            <img className={styles.logoHome}
                 src={ logo }
                 alt="logo"/>
-            <Link className="btn" to='/add'>AGREGAR PEDIDO</Link>
-            <Link className="btn" to='/edit'>EDITAR PEDIDO</Link>
-            <Link className="btn" to='/status'>ESTADO PEDIDOS</Link>
+            <Link className={styles.btnRoute} to='/add'>AGREGAR PEDIDO</Link>
+            <Link className={styles.btnRoute} to='/edit'>EDITAR PEDIDO</Link>
+            <Link className={styles.btnRoute} to='/status'>ESTADO PEDIDOS</Link>
         </div>
     )
 }
