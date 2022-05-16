@@ -22,7 +22,7 @@
 }
 
 .btnMenu {
-  color: #FFF7EC;
+  color: #D67D3E;
   background-color: transparent;
   border: none;
   font-family: Koulen;
@@ -33,6 +33,10 @@
   text-align: center;
   text-decoration: none;
   margin: 1rem;
+}
+
+.btnMenu:focus {
+  color: #FFF7EC;
 }
 
 .btnContainer {

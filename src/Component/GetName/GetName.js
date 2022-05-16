@@ -1,21 +1,15 @@
 import React, {useState} 
 from 'react'
 
-// import {getTotal} from './getTotal';
-
 import styles from './GetName.module.css'
 
 export const GetName = ({orders, setOrders}) => {
 
     const [inputValue, setInputValue] = useState('');
+    // const [totalValue, setTotalValue] = useState([]);
     const orderNumber = new Date().getTime();
-    // const [totalToPay, setTotalToPay] = useState()
 
-    // const createOrder = (orders, dataClient) => {
-    //     setOrders({
-    //         ...orders
-    //     })
-    // }
+    const totalOrder = orders.reduce((acumulador, valorActual) => acumulador + valorActual[1].price, 0 )
 
     const handleInputChange = (event) => {
         setInputValue(event.target.value)
@@ -51,15 +45,18 @@ export const GetName = ({orders, setOrders}) => {
             }>
                 <div className={
                     styles.totalContainer
-                }></div>
+                }>
                 <p className={
                         styles.title
                     }>TOTAL</p>
                 <p className={
-                        styles.title
-                    }>
-                    {/* { totalToPay } */}
+                        styles.totalToPay
+                    }>$
+                    { totalOrder }
                     </p>
+                <button className={
+                        styles.btnOrder}>INGRESAR PEDIDO</button>
+                </div>
             </div>
         </div>
     )
