@@ -2,10 +2,11 @@
 
 .nameContainer, .orderNumberContainer {
     display: flex;
-    align-items: center;
     gap: 0.5rem;
+    
+    flex-direction: column;
 }
-.client, .orderNumber {
+.title, .orderNumber {
     color: #41051A;
     font-family: Concert One;
     font-size: 1.5rem;
