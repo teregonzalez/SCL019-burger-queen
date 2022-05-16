@@ -17,18 +17,3 @@ export const Home = () => {
         </div>
     )
 }
-
-// (
-//     <NavLink className="homeContainer">
-//         <img className="logo"
-//             src={logo}
-//             alt="logo"/>
-//         <NavLink className="btn">AGREGAR PEDIDO</NavLink>
-//         {/* <Link to={'/newOrder'}>AGREGAR PEDIDO</Link>
-//         </Link> */}
-//         <NavLink className="btn">EDITAR PEDIDO</NavLink>
-//         {/* <Link to={'/editOrder'}>EDITAR PEDIDO</Link> */}
-//         <NavLink className="btn">ESTADO PEDIDOS</NavLink>
-//         {/* <Link to={'/orderState'}>ESTADO PEDIDOS</Link>
-//         </button> */} </div>
-// )

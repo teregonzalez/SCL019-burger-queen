@@ -1,7 +1,7 @@
 .headerContainer{
     display: flex;
     align-content: center;
-    padding: 2.88%;
+    padding: 1rem
 }
 .logo {
     max-width: 100px;

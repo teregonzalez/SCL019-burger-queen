@@ -1,0 +1,53 @@
+
+.detailContainer {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    background-color: #D497AD;
+    width: 46.438rem;
+    padding: 1rem;
+  }
+  
+  th {
+    font-family: 'Koulen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.563rem;
+    color: #41051A;
+    text-align: center;
+  }
+  
+  .tdFood {
+    font-family: 'Koulen';
+    color: #7C1B3E;
+    background-color: #E7C1C9;
+    font-size: 1.375rem;
+    text-align: center;
+  }
+  
+  .btnDelete {
+    color: #7C1B3E;
+    background-color: #FFF7EC;
+    border: none;
+    font-family: Koulen;
+    font-size: 1.375rem;
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .tdContador {
+    font-family: 'Koulen';
+    color: #7C1B3E;
+    background-color: #FFF7EC;
+    font-size: 1.375rem;
+    text-align: center;
+  }
+  
+  .tdPrice{
+    font-family: 'Koulen';
+    color: #7C1B3E;
+    background-color: #E7C1C9;
+    font-size: 1.375rem;
+    text-align: center;
+  }
+  
