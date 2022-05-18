@@ -14,12 +14,22 @@ export const DisplayMenu = ({ orders, setOrders }) => {
     }
 
     const addToOrder = (food) => {
-        // const exist = 
-        // console.log(orde.find()) 
-        setOrders(currentOrder => [
-            ...currentOrder,
-            food
-        ])
+        const exist = orders.find((order) => order.name === food.name )
+        if(exist){
+            setOrders(
+                orders.map((order) =>
+                order.name === food.name ? { ...exist, qty: exist.qty + 1} : order
+                )
+            )
+        } else {
+
+            setOrders(currentOrder => [
+                ...currentOrder,
+                {
+                    ...food, qty: 1
+                }
+            ])
+        }
     }
 
     useEffect(() => {

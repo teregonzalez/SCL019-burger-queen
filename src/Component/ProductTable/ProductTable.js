@@ -5,6 +5,8 @@ import styles from './ProductTable.module.css'
 
 export const ProductTable = ({ orders, setOrders }) => {
 
+    let total = (price, qty) => price * qty;
+
     const deleteProduct = (product) => {
         setOrders(orders.filter((order, index) => index !== product))
     }
@@ -39,11 +41,13 @@ export const ProductTable = ({ orders, setOrders }) => {
                         </td>
                         <td className={
                             styles.tdContador
-                        }>contador</td>
+                        }>{
+                            order.qty
+                        }</td>
                         <td className={
                             styles.tdPrice
                         }>$ {
-                            order.price
+                            total(order.price, order.qty)
                         }</td>
                     </tr>
                 </tbody>
