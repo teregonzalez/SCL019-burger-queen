@@ -14,7 +14,8 @@ export const DisplayMenu = ({ orders, setOrders }) => {
     }
 
     const addToOrder = (food) => {
-        console.log(food) 
+        // const exist = 
+        // console.log(orde.find()) 
         setOrders(currentOrder => [
             ...currentOrder,
             food
@@ -24,13 +25,13 @@ export const DisplayMenu = ({ orders, setOrders }) => {
     useEffect(() => {
         getMenu().then(res => {
             if (menu === 'breakfast') {
-                const menuFoods = Object.entries(res.breakfast).map((value) => {
+                const menuFoods = (res.breakfast).map((value) => {
                     return value
                 });
                 setFoods(menuFoods)
             }
             if (menu === 'traditional') {
-                const menuFoods = Object.entries(res.traditional).map((value) => {
+                const menuFoods = (res.traditional).map((value) => {
                     return value
                 });
                 setFoods(menuFoods)
@@ -69,7 +70,7 @@ export const DisplayMenu = ({ orders, setOrders }) => {
                             () => addToOrder(food)
                     }>
                         {
-                        food[1].name
+                        food.name
                     }</button>
                 </div>
             ))

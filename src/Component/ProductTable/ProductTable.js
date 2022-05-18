@@ -27,7 +27,7 @@ export const ProductTable = ({ orders, setOrders }) => {
                             styles.tdFood
                         }>
                             {
-                            order[1].name
+                            order.name
                         }</td>
                         <td>
                             <button className={
@@ -43,7 +43,7 @@ export const ProductTable = ({ orders, setOrders }) => {
                         <td className={
                             styles.tdPrice
                         }>$ {
-                            order[1].price
+                            order.price
                         }</td>
                     </tr>
                 </tbody>

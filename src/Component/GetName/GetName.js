@@ -9,7 +9,7 @@ export const GetName = ({orders, setOrders}) => {
     
     const orderNumber = new Date().getTime();
 
-    const totalOrder = orders.reduce((acumulador, valorActual) => acumulador + valorActual[1].price, 0 )
+    const totalOrder = orders.reduce((acumulador, valorActual) => acumulador + valorActual.price, 0 )
 
     const handleInputChange = (event) => {
         setInputValue(event.target.value)
