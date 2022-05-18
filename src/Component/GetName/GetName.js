@@ -6,7 +6,7 @@ import styles from './GetName.module.css'
 export const GetName = ({orders, setOrders}) => {
 
     const [inputValue, setInputValue] = useState('');
-    // const [totalValue, setTotalValue] = useState([]);
+    
     const orderNumber = new Date().getTime();
 
     const totalOrder = orders.reduce((acumulador, valorActual) => acumulador + valorActual[1].price, 0 )

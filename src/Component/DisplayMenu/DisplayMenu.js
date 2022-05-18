@@ -14,6 +14,7 @@ export const DisplayMenu = ({ orders, setOrders }) => {
     }
 
     const addToOrder = (food) => {
+        console.log(food) 
         setOrders(currentOrder => [
             ...currentOrder,
             food
