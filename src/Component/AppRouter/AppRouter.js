@@ -14,8 +14,6 @@ import { OrderStatus } from "../OrderStatus/OrderStatus";
 export const AppRouter = () => {
     return (
         <Router>
-          <div>
-            <div>
             <Routes>
               <Route path="/add" element={<AddOrder />}/>
               <Route path="/edit" element={<EditOrder />}/>
@@ -23,10 +21,6 @@ export const AppRouter = () => {
               <Route path="/" element={<Home />}/>
               <Route path="*" element={<Navigate to='/' />}/>
             </Routes>
-              </div>
-
-          </div>
-
         </Router>
       );
 }
