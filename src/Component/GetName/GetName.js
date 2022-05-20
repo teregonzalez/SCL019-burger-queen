@@ -5,15 +5,18 @@ import styles from './GetName.module.css'
 
 export const GetName = ({orders, setOrders}) => {
 
-    const [inputValue, setInputValue] = useState('');
-    
-    const orderNumber = new Date().getTime();
+    const [name, setName] = useState('');
+    const [orderNumber, setOrderNumber] = useState('');
+
+    if(orderNumber === '') {
+        setOrderNumber(new Date().getTime())
+    }
 
     const totalOrder = orders.reduce((acumulador, valorActual) => acumulador + valorActual.price * valorActual.qty, 0 )
 
     const handleInputChange = (event) => {
-        setInputValue(event.target.value)
-        console.log(inputValue)
+        setName(event.target.value)
+        console.log(name)
     }
 
     return (
@@ -32,6 +35,7 @@ export const GetName = ({orders, setOrders}) => {
                     }
                     name='clientName'
                     placeholder='NOMBRE CLIENTE'
+                    value={ name }
                     onChange={handleInputChange}></input>
                 <p className={
                     styles.orderNumber
