@@ -31,15 +31,15 @@ export const AddOrder = () => {
                 <Link className={
                         styles.btnReturn
                     }
-                    to='/edit'>EDITAR PEDIDO</Link>
+                    to='/detail'>detalle pedidos</Link>
                 <Link className={
                         styles.btnReturn
                     }
-                    to='/status'>ESTADO PEDIDOS</Link>
+                    to='/status'>estado pedidos</Link>
                 <Link className={
                         styles.btnReturn
                     }
-                    to='/'>VOLVER A HOME</Link>
+                    to='/'>volver a home</Link>
             </div>
         </>
     )

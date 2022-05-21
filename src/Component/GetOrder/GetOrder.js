@@ -1,7 +1,7 @@
 import React, {useState} 
 from 'react'
 import { db } from "../../firebase/firebase-config";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, Timestamp } from "firebase/firestore";
 
 import styles from './GetOrder.module.css'
 
@@ -26,7 +26,8 @@ export const GetOrder = ({orders, setOrders}) => {
             name: name,
             total: totalOrder,
             orderNumber: orderNumber,
-            status: 'pendiente'
+            status: 'pendiente',
+            date: Timestamp.fromDate(new Date())
         }
         console.log(orderData);
 
