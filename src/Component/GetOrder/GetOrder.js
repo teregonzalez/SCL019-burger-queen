@@ -9,7 +9,6 @@ export const GetOrder = ({orders, setOrders}) => {
 
     const [name, setName] = useState('');
     const [orderNumber, setOrderNumber] = useState('');
-    const [orderData, setOrderData] = useState({});
 
     if(orderNumber === '') {
         setOrderNumber(new Date().getTime())
@@ -19,21 +18,16 @@ export const GetOrder = ({orders, setOrders}) => {
 
     const handleInputChange = (event) => {
         setName(event.target.value)
-        console.log(name)
     }
 
     const createOrderData = async() => {
-        if(name.length < 3){
-           alert("Ingresa nombre");
-           return
-        } 
-        setOrderData({
+        const orderData = {
             orders: orders,
             name: name,
             total: totalOrder,
             orderNumber: orderNumber,
             status: 'pendiente'
-        })
+        }
         console.log(orderData);
 
         try {
@@ -44,6 +38,11 @@ export const GetOrder = ({orders, setOrders}) => {
           } catch (e) {
             console.error("Error adding document: ", e);
           }
+        
+          setOrders([]);
+          setName('');
+          setOrderNumber('');
+          return
     }
 
 
@@ -64,7 +63,7 @@ export const GetOrder = ({orders, setOrders}) => {
                     name='clientName'
                     placeholder='NOMBRE CLIENTE'
                     value={ name }
-                    onChange={handleInputChange}/>
+                    onChange={handleInputChange} ></input>
                 <p className={
                     styles.orderNumber
                 }>Pedido:</p>
