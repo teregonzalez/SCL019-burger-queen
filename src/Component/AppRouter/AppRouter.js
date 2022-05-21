@@ -8,7 +8,7 @@ import {
 
 import { Home } from "../Home/Home";
 import { AddOrder } from '../AddOrder/AddOrder'
-import { EditOrder } from "../EditOrder/EditOrder";
+import { DetailOrder } from "../DetailOrder/DetailOrder";
 import { OrderStatus } from "../OrderStatus/OrderStatus";
 
 export const AppRouter = () => {
@@ -16,7 +16,7 @@ export const AppRouter = () => {
         <Router>
             <Routes>
               <Route path="/add" element={<AddOrder />}/>
-              <Route path="/edit" element={<EditOrder />}/>
+              <Route path="/detail" element={<DetailOrder />}/>
               <Route path="/status" element={<OrderStatus />}/>
               <Route path="/" element={<Home />}/>
               <Route path="*" element={<Navigate to='/' />}/>

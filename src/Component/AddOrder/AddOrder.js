@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 
-import {GetName} from '../GetName/GetName'
+import {GetOrder} from '../GetOrder/GetOrder'
 import {Header} from '../Header/Header'
 import {ProductTable} from '../ProductTable/ProductTable'
 import {DisplayMenu} from '../DisplayMenu/DisplayMenu'
@@ -25,7 +25,7 @@ export const AddOrder = () => {
                 }>
                     <ProductTable orders={orders}
                         setOrders={setOrders}/>
-                    <GetName orders={orders}
+                    <GetOrder orders={orders}
                         setOrders={setOrders}/>
                 </div>
                 <Link className={

@@ -12,7 +12,7 @@ export const Home = () => {
                 src={ logo }
                 alt="logo"/>
             <Link className={styles.btnRoute} to='/add'>AGREGAR PEDIDO</Link>
-            <Link className={styles.btnRoute} to='/edit'>EDITAR PEDIDO</Link>
+            <Link className={styles.btnRoute} to='/detail'>DETALLE PEDIDOS</Link>
             <Link className={styles.btnRoute} to='/status'>ESTADO PEDIDOS</Link>
         </div>
     )

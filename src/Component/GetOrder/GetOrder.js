@@ -1,23 +1,51 @@
 import React, {useState} 
 from 'react'
+import { db } from "../../firebase/firebase-config";
+import { collection, addDoc } from "firebase/firestore";
 
-import styles from './GetName.module.css'
+import styles from './GetOrder.module.css'
 
-export const GetName = ({orders, setOrders}) => {
+export const GetOrder = ({orders, setOrders}) => {
 
     const [name, setName] = useState('');
     const [orderNumber, setOrderNumber] = useState('');
+    const [orderData, setOrderData] = useState({});
 
     if(orderNumber === '') {
         setOrderNumber(new Date().getTime())
     }
 
-    const totalOrder = orders.reduce((acumulador, valorActual) => acumulador + valorActual.price * valorActual.qty, 0 )
+    const totalOrder = orders.reduce((acumulador, valorActual) => acumulador + valorActual.price * valorActual.qty, 0 );
 
     const handleInputChange = (event) => {
         setName(event.target.value)
         console.log(name)
     }
+
+    const createOrderData = async() => {
+        if(name.length < 3){
+           alert("Ingresa nombre");
+           return
+        } 
+        setOrderData({
+            orders: orders,
+            name: name,
+            total: totalOrder,
+            orderNumber: orderNumber,
+            status: 'pendiente'
+        })
+        console.log(orderData);
+
+        try {
+            const docRef = await addDoc(collection(db, "ordersCollection"), {
+                orderData
+            });
+            console.log("Document written with ID: ", docRef.id);
+          } catch (e) {
+            console.error("Error adding document: ", e);
+          }
+    }
+
 
     return (
         <div className={
@@ -36,7 +64,7 @@ export const GetName = ({orders, setOrders}) => {
                     name='clientName'
                     placeholder='NOMBRE CLIENTE'
                     value={ name }
-                    onChange={handleInputChange}></input>
+                    onChange={handleInputChange}/>
                 <p className={
                     styles.orderNumber
                 }>Pedido:</p>
@@ -61,7 +89,7 @@ export const GetName = ({orders, setOrders}) => {
                 <button className={
                         styles.btnOrder}
                         onClick={
-                            () => console.log(orders)
+                            () => createOrderData()
                     }>INGRESAR PEDIDO</button>
                 </div>
             </div>
