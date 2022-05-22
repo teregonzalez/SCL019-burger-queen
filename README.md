@@ -22,3 +22,8 @@ paleta de colores
 
 prototipo figma
 
+
+![Group 3](https://user-images.githubusercontent.com/81347919/169677930-f9b118a6-8e44-460a-88e7-d5c00119fbe2.png)
+![Group 3 (1)](https://user-images.githubusercontent.com/81347919/169677937-4425f723-dbcc-4e65-8aa8-ad5751dad9a1.png)
+![Group 3 (2)](https://user-images.githubusercontent.com/81347919/169677924-e5f84a1a-0f8a-4383-834d-3c0c45e0b772.png)
+
