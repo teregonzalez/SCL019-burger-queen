@@ -1,23 +1,68 @@
-import React from 'react'
+
+import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom'
 
-import img404 from '../../img/img404.png';
+import {db} from "../../firebase/firebase-config";
+import {collection, onSnapshot, query} from "firebase/firestore";
 import {Header} from '../Header/Header'
 import styles from './OrderStatus.module.css'
 
 export const OrderStatus = () => {
+
+    const [orderData, setOrderData] = useState([]);
+
+    useEffect(() => {
+        const ordersCollection = collection(db, "ordersCollection");
+        const q = query(ordersCollection);
+        const getOrders = onSnapshot(q, (snapshot) => setOrderData(snapshot.docs.map((doc) => ({
+            ...doc.data(),
+            id: doc.id,
+        }))));
+        return getOrders;
+    }, []);
+
+    const checkStatus = (status) => {
+        if (!status){
+            return 'Pendiente'}
+            else {
+                return status
+            }
+      }
     return (
         <>
             <Header/>
-            <div className={styles.statsContainer}>
-                <h1>ESTATUS DE ORDENES EN CONSTRUCCION</h1>
-                <img className={styles.img404}
-                    src={img404}
-                    alt="img404"/>
+            <p className={styles.titleAdd}>estado de ordenes</p>
+            <div className={styles.statusContainer}>
+            <div className={styles.statusOrdersContainer}>
+
+{
+                    orderData && orderData.map((order, i) => (
+                        <div className={
+                    styles.orderStatusContainer
+                } key={
+                    order.id
+                        }>
+                        <div className={
+                    styles.orderDetailContainer
+                }>
+                        <p className={styles.pStyle}>N° {
+                            order.orderData.orderNumber
+                        }</p>
+                        <p className={styles.pStyle}>{
+                            order.orderData.name
+                        }</p>
+                        <button className={styles.btnStatusStyle}>{
+                            checkStatus(order.status)
+                        }</button>
+                        </div>
+                        </div>
+                    ))
+}
+</div>
                 <Link className={styles.btnReturn} to='/add'>AGREGAR PEDIDO</Link>
-                <Link className={styles.btnReturn} to='/edit'>EDITAR PEDIDO</Link>
+                <Link className={styles.btnReturn} to='/detail'>DETALLE PEDIDO</Link>
                 <Link className={styles.btnReturn} to='/'>VOLVER A HOME</Link>
-            </div>
+                </div>
         </>
     )
 }

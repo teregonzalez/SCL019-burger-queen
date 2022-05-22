@@ -21,6 +21,12 @@ export const GetOrder = ({orders, setOrders}) => {
     }
 
     const createOrderData = async() => {
+        if(name.length < 3){
+            alert('Ingresa nombre')
+        }
+        if(orders.length < 1){
+            alert('Ingresa producto')
+        }
         const orderData = {
             orders: orders,
             name: name,
