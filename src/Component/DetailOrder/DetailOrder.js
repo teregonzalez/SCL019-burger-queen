@@ -19,7 +19,6 @@ export const DetailOrder = () => {
             ...doc.data(),
             id: doc.id
         }))));
-        console.log(orderData)
         return getOrders;
     }, []);
 
