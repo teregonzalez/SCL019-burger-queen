@@ -2,7 +2,8 @@ import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom'
 
 import {db} from "../../firebase/firebase-config";
-import {collection, onSnapshot, query} from "firebase/firestore";
+import {collection, updateDoc,
+    doc, onSnapshot, query} from "firebase/firestore";
 
 import {Header} from '../Header/Header'
 import styles from './DetailOrder.module.css'
@@ -10,10 +11,6 @@ import styles from './DetailOrder.module.css'
 export const DetailOrder = () => {
 
     const [orderData, setOrderData] = useState([]);
-
-    const changeStatus = () => {
-        console.log('Pium!')
-    }
 
     useEffect(() => {
         const ordersCollection = collection(db, "ordersCollection");
@@ -26,6 +23,20 @@ export const DetailOrder = () => {
         return getOrders;
     }, []);
 
+    const changeStatus = async (id, status) => {
+        const orderDoc = doc(db, "ordersCollection", id);
+        const newFields = { status: "Listo" };
+        await updateDoc(orderDoc, newFields);
+        console.log(newFields);
+      };
+
+      const checkStatus = (status) => {
+        if (!status){
+            return 'Pendiente'}
+            else {
+                return status
+            }
+      }
     return (
         <>
             <Header/>
@@ -82,8 +93,8 @@ export const DetailOrder = () => {
                         <button className={
                         styles.btnChangeStatus}
                         onClick={
-                            () => changeStatus()
-                    }>marcar listo</button>
+                            () => changeStatus(order.id, order.status)
+                    }>{checkStatus(order.status)}</button>
                         </div>
 
                     ))

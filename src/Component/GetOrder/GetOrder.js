@@ -26,7 +26,6 @@ export const GetOrder = ({orders, setOrders}) => {
             name: name,
             total: totalOrder,
             orderNumber: orderNumber,
-            status: 'pendiente',
             date: Timestamp.fromDate(new Date())
         }
         console.log(orderData);
