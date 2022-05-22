@@ -33,13 +33,17 @@ Selecciona en el menu la opción.
 
 
 Puedes agregar un pedido, seleccionando producto e ingresando nombre, también puedes editar los productos seleccionados y el nombre ingresado antes de ingresarlo.
+
 ![bq1](https://user-images.githubusercontent.com/81347919/169678185-2aac8d48-4ecb-4926-a2af-6c6f39d97c63.png)
 ![bq2](https://user-images.githubusercontent.com/81347919/169678186-5dac4ccb-a55d-4b8a-ad4b-5e76737b247c.png)
 
 
+
 Puedes revisar los detalles de cada pedido y cambiar su estado.
+
 ![bq3](https://user-images.githubusercontent.com/81347919/169678229-9657b45e-f5c8-443d-9027-a5948547d06a.png)
 ![bq4](https://user-images.githubusercontent.com/81347919/169678231-6508c2a1-c461-4d59-aa7a-5acf29f83cfa.png)
+
 
 
 Puedes revisar el estado de los pedidos.
