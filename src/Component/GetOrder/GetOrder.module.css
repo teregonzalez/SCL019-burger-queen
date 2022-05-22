@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Koulen&family=Yaldevi&display=swap');
+
+.getDataContainer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.nameContainer, .orderNumberContainer {
+    display: flex;
+    flex-direction: column;
+}
+.title, .orderNumber {
+    color: #41051A;
+    font-family: Concert One;
+    font-size: 1.5rem;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+
+.clientName {
+    color: #41051A;
+    font-family: Koulen;
+    border-color: transparent;
+    font-size: 1.5rem;
+}
+
+.clientName::placeholder {
+    color: #B0929D;
+}
+
+.totalToPay {
+    background-color: #FFF7EC;
+}
+
+.totalToPay{
+    font-family: 'Koulen';
+    color: #7C1B3E;
+    background-color: #E7C1C9;
+    font-size: 2.25rem;
+    text-align: center;
+  }
+
+.btnOrder {
+    color: #FFF7EC;
+    background-color: #D67D3E;
+    cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  padding: 1rem;
+  border: none;
+  font-family: Koulen;
+  font-size: 1.375rem;
+  border-radius: 15px;
+}
+
+.btnOrder:hover {     
+    background-color:#41051A;
+    color: #FFF7EC;    
+  }

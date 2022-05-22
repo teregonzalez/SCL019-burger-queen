@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Koulen&family=Yaldevi&display=swap');
+
+h1 {
+  font-family: Koulen;
+  font-size: 2rem;
+  color: #FFF7EC;
+  margin: 0.5rem
+}
+
+.addContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titleAdd {
+  font-family: Koulen;
+  font-size: 2.25rem;
+  color: #41051A;
+  margin: 0rem 0rem 0rem 0rem;
+}
+
+.cartContainer {
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  background-color: #41051A;
+  border-radius: 0.938rem 0.938rem 0px 0px;
+  margin: 1.406rem 1.406rem 0rem 1.406rem;
+  width: 46.438rem;
+  padding: 0rem 0rem 2rem 0rem;
+}
+
+.btnMenuContainer {
+  display: flex;
+  flex-direction: row
+}
+
+.addName {
+  color: #FFF7EC;
+  font-family: Concert One;
+  margin: 2rem 0rem 0rem 0rem;
+  font-size: 2.25rem;
+}
+
+.selectTitle {
+  color: #FFF7EC;
+  font-family: Concert One;
+  margin: 0rem;
+  font-size: 2.25rem;
+}
+
+
+.detailContainer {
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  background-color: #D497AD;
+  width: 46.438rem;
+  padding: 1rem;
+}
+
+
+.btnReturn {
+  margin: 0.5rem;
+  color: #FFF7EC;
+  background-color: #D67D3E;
+  border-radius: 15px;
+  border: none;
+  font-family: Koulen;
+  font-size: 2.25rem;
+  width: 46.438rem;
+  height: 3.25rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btnReturn:hover {     
+  background-color:#41051A;
+  color: #FFF7EC;    
+}

@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Yaldevi&display=swap');
+
+.homeContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 16.594rem 18.375rem 16.594rem 18.375rem;
+    justify-content: space-between;
+}
+
+.logoHome {
+    height: 13.813rem;
+}
+
+.btnRoute {
+    margin: 1rem;
+    color: #FFF7EC;
+    background-color: #D67D3E;
+    border-radius: 15px;
+    border: none;
+    font-family: Koulen;
+    font-size: 3.125rem;
+    width: 34.063rem;
+    height: 5.25rem;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+.btnRoute:hover {     
+    background-color:#41051A;
+    color: #FFF7EC;    
+}

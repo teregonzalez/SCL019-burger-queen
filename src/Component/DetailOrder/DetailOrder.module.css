@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Yaldevi&display=swap');
+
+.titleAdd {
+  font-family: Koulen;
+  font-size: 2.25rem;
+  color: #41051A;
+  margin: 0rem 0rem 0rem 0rem;
+  text-align: center;
+}
+
+.pStyle {
+  margin-top: 0;
+  margin-bottom: 0.1rem;
+}
+
+.trHead{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.detailContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ordersContainer {
+  display: flex;
+  width: 48rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.orderContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #41051A;
+  border-radius: 0.938rem 0.938rem 0px 0px;
+  margin: 0.8rem;
+  padding: 0.5rem 0rem;
+  justify-content: space-around;
+}
+
+.orderDetailContainer {
+  flex-direction: column;
+    background-color: #41051A;
+    font-family: Koulen;
+    font-size: 1.563rem;
+    color: #FFF7EC;
+    display: flex;
+    align-items: center;
+    margin: 0rem 6rem;
+}
+
+.orderTableContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #D497AD;
+}
+
+.trBody{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 1rem;
+}
+
+.trHead{
+  display: flex;
+}
+
+.tdBody {
+  display: flex;
+  flex-direction: column;
+  background-color: #E7C1C9;
+  font-family: Koulen;
+  font-size: 1.375rem;
+  color: #7C1B3E;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.tdBodyQty {
+  display: flex;
+  flex-direction: column;
+  background-color: #E7C1C9;
+  font-family: Koulen;
+  font-size: 1.375rem;
+  color: #7C1B3E;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  margin-right: 1.2rem;
+}
+
+.btnChangeStatus {
+  color: #FFF7EC;
+    background-color: #D67D3E;
+    cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  margin: 1rem;
+  font-family: Koulen;
+  font-size: 1.375rem;
+  border-radius: 15px;
+}
+
+.btnChangeStatus:hover {     
+    background-color:#41051A;
+    color: #FFF7EC;    
+  }
+
+
+.btnReturn {
+    margin: 0.5rem;
+    color: #FFF7EC;
+    background-color: #D67D3E;
+    border-radius: 15px;
+    border: none;
+    font-family: Koulen;
+    font-size: 2.25rem;
+    width: 46.438rem;
+    height: 3.25rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .btnReturn:hover {     
+    background-color:#E7C1C9;
+    color: #FFF7EC;    
+  }
+
+  
