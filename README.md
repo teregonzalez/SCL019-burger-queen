@@ -47,6 +47,7 @@ Puedes revisar los detalles de cada pedido y cambiar su estado.
 
 
 Puedes revisar el estado de los pedidos.
+
 ![bq5](https://user-images.githubusercontent.com/81347919/169678252-3d001b7e-c4f1-4c5d-8e30-2b63e5637f24.png)
 ![bq6](https://user-images.githubusercontent.com/81347919/169678253-5ec24f86-2a9b-4d7d-b65c-03832d9ea260.png)
 
