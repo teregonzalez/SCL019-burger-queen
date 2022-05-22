@@ -16,6 +16,8 @@ Aplicación creada con React. Puedes ingresar, editar y revisar pedidos.
 ## Propototipo
 
 paleta de colores
+
+
 ![paleta](https://user-images.githubusercontent.com/81347919/169677715-74be8761-5f84-450b-bb0a-e3cab3ca1ba6.png)
 
 prototipo figma
