@@ -26,6 +26,8 @@
     text-align: center;
     align-items: center;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
 }
 
 .btnRoute:hover {     

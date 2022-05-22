@@ -2,42 +2,93 @@ import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom'
 
 import {db} from "../../firebase/firebase-config";
-import {collection, onSnapshot, query, orderBy} from "firebase/firestore";
+import {collection, onSnapshot, query} from "firebase/firestore";
 
 import {Header} from '../Header/Header'
 import styles from './DetailOrder.module.css'
 
 export const DetailOrder = () => {
 
-    const [orders, setOrders] = useState([]);
+    const [orderData, setOrderData] = useState([]);
+
+    const changeStatus = () => {
+        console.log('Pium!')
+    }
 
     useEffect(() => {
         const ordersCollection = collection(db, "ordersCollection");
-        const q = query(ordersCollection, orderBy("date", "desc"));
-        const getOrders = onSnapshot(q, (snapshot) => 
-        setOrders(snapshot.docs.map((doc) => ({
-            ...doc.data(), id: doc.id})))
-        );
-        console.log(orders)
+        const q = query(ordersCollection);
+        const getOrders = onSnapshot(q, (snapshot) => setOrderData(snapshot.docs.map((doc) => ({
+            ...doc.data(),
+            id: doc.id
+        }))));
+        console.log(orderData)
         return getOrders;
     }, []);
 
     return (
         <>
             <Header/>
+            <p className={styles.titleAdd}>pedidos pendientes</p>
             <div className={
                 styles.detailContainer
             }>
-                <h1>pedidos</h1>
-                <div className={
-                    styles.orderHeader
+            <div className={
+                styles.ordersContainer
+            }>
+
+                    {
+                    orderData && orderData.map((order, i) => (
+                        <div className={
+                    styles.orderContainer
+                } key={
+                    order.id
+                        }>
+                        <div className={
+                    styles.orderDetailContainer
                 }>
-                {
-                    orders &&  orders.map((order) => (
-                <li key={order.id}>{order.name}</li>
-                ))
-            }
-                </div>
+                        <p className={styles.pStyle}>N° {
+                            order.orderData.orderNumber
+                        }</p>
+                        <p className={styles.pStyle}>{
+                            order.orderData.name
+                        }</p>
+                        </div>
+                        <table className={
+                    styles.orderTableContainer
+                } key={
+                            order.id
+                        }><thead>
+	<tr className={styles.trHead}>
+		<th className={
+                    styles.categoryTitle
+                }>producto</th>
+		<th className={
+                    styles.categoryTitle
+                }>cantidad</th>
+	</tr>
+	</thead>
+    {order.orderData.orders.map((order, i) => (
+    <tbody key={
+                            i
+                        }>
+	<tr className={styles.trBody} >
+        <td className={styles.tdBody}>{order.name}</td>
+        <td className={styles.tdBodyQty} >{order.qty}</td>
+	</tr>
+	</tbody>
+    ))}
+                        </table>
+                        <button className={
+                        styles.btnChangeStatus}
+                        onClick={
+                            () => changeStatus()
+                    }>marcar listo</button>
+                        </div>
+
+                    ))
+                } 
+            </div>
                 <Link className={
                         styles.btnReturn
                     }
@@ -45,7 +96,7 @@ export const DetailOrder = () => {
                 <Link className={
                         styles.btnReturn
                     }
-                    to='/status'>DETALLES PEDIDOS</Link>
+                    to='/status'>ESTADO PEDIDOS</Link>
                 <Link className={
                         styles.btnReturn
                     }
