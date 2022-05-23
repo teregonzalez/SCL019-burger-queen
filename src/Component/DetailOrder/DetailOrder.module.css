@@ -137,4 +137,8 @@
     .btnReturn {
         width: 20rem;
     }
+
+    .ordersContainer {
+      width: 20rem;
+    }
   }
