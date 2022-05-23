@@ -133,4 +133,8 @@
     color: #FFF7EC;    
   }
 
-  
+  @media only screen and (max-width: 600px) {
+    .btnReturn {
+        width: 20rem;
+    }
+  }
