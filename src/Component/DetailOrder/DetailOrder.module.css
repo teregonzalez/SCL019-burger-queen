@@ -140,5 +140,6 @@
 
     .ordersContainer {
       width: 20rem;
+      justify-content: center;
     }
   }
