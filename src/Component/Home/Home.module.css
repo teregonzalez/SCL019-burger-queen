@@ -34,3 +34,9 @@
     background-color:#41051A;
     color: #FFF7EC;    
 }
+
+@media only screen and (max-width: 600px) {
+    .btnRoute {
+        width: 26rem;
+    }
+}
