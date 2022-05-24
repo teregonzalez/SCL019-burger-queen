@@ -75,3 +75,14 @@
     background-color:#41051A;
     color: #FFF7EC;    
   }
+
+  @media only screen and (max-width: 600px) {
+    .statusOrdersContainer {
+        width: 20rem;
+        justify-content: center;
+    }
+
+    .btnReturn {
+      width: 20rem;
+  }
+  }

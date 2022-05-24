@@ -57,3 +57,24 @@
     background-color:#41051A;
     color: #FFF7EC;    
   }
+
+  @media only screen and (max-width: 600px) {
+    .btnReturn {
+        width: 20rem;
+    }
+    .clientName {
+        color: #41051A;
+        font-family: Koulen;
+        border-color: transparent;
+        font-size: 1rem;
+    }
+
+    .totalToPay {
+        font-family: 'Koulen';
+        color: #7C1B3E;
+        background-color: #E7C1C9;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+  }

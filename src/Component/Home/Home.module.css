@@ -34,3 +34,23 @@
     background-color:#41051A;
     color: #FFF7EC;    
 }
+
+@media only screen and (max-width: 600px) {
+    .btnRoute {
+        width: 20rem;
+        font-size: 2rem;
+    }
+
+    .homeContainer{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 5rem 0rem;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    .logoHome {
+        height: 8rem;
+    }
+}

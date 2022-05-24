@@ -133,4 +133,13 @@
     color: #FFF7EC;    
   }
 
-  
+  @media only screen and (max-width: 600px) {
+    .btnReturn {
+        width: 20rem;
+    }
+
+    .ordersContainer {
+      width: 20rem;
+      justify-content: center;
+    }
+  }
