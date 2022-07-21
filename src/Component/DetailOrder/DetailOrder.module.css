@@ -139,7 +139,11 @@
     }
 
     .ordersContainer {
-      width: 20rem;
+      width: 49rem;
       justify-content: center;
+    }
+
+    .orderContainer {
+      margin: 0.3rem;
     }
   }
